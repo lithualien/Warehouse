@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d005264-0465-49a0-a8be-3a7a2f8c6eb9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/github/lithualien/dao/Dao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/github/lithualien/dao/DaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/github/lithualien/product/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/lithualien/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/lithualien/product/Product.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1579870975928</updated>
       <workItem from="1579874671539" duration="85000" />
-      <workItem from="1579874981255" duration="457000" />
+      <workItem from="1579874981255" duration="1692000" />
     </task>
     <servers />
   </component>
@@ -88,6 +83,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="452" y="71" key="#com.intellij.ide.util.MemberChooser" timestamp="1579876233068">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="452" y="71" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1579876233068" />
     <state x="378" y="48" key="com.intellij.ide.util.TipDialog" timestamp="1579875043980">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
