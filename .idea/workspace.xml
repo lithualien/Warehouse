@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d005264-0465-49a0-a8be-3a7a2f8c6eb9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/com/github/lithualien/product/ProductTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/lithualien/product/Product.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +17,8 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -31,11 +35,30 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.github.lithualien.product" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ProductTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.github.lithualien.main.Main" />
       <module name="Warehouse" />
@@ -46,8 +69,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProductTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Warehouse" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.lithualien.product.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.lithualien.product" />
+      <option name="MAIN_CLASS_NAME" value="com.github.lithualien.product.ProductTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Warehouse" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.lithualien.product.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.lithualien.product" />
+      <option name="MAIN_CLASS_NAME" value="com.github.lithualien.product.ProductTest" />
+      <option name="METHOD_NAME" value="testToString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductTest" />
+        <item itemvalue="JUnit.ProductTest.testToString" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -75,7 +131,7 @@
       <option name="presentableId" value="Default" />
       <updated>1579870975928</updated>
       <workItem from="1579874671539" duration="85000" />
-      <workItem from="1579874981255" duration="1692000" />
+      <workItem from="1579874981255" duration="3783000" />
     </task>
     <servers />
   </component>
@@ -83,13 +139,57 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="275" y="28" key="#Project_Structure" timestamp="1579877084316">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="28" key="#Project_Structure/0.0.1366.738@0.0.1366.738" timestamp="1579877084316" />
+    <state x="92" y="92" width="1182" height="554" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1579878762336">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="92" y="92" width="1182" height="554" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.738@0.0.1366.738" timestamp="1579878762336" />
     <state x="452" y="71" key="#com.intellij.ide.util.MemberChooser" timestamp="1579876233068">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="452" y="71" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1579876233068" />
+    <state x="413" y="130" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1579877111832">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="413" y="130" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1366.738@0.0.1366.738" timestamp="1579877111832" />
+    <state x="313" y="59" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1579877042204">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="313" y="59" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1366.738@0.0.1366.738" timestamp="1579877042204" />
+    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1579878793268">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1579878793268" />
+    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1579878793268">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1579878793268" />
+    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1579878793268">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1579878793268" />
+    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1579878793268">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1579878793268" />
     <state x="378" y="48" key="com.intellij.ide.util.TipDialog" timestamp="1579875043980">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="378" y="48" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1579875043980" />
+    <state x="387" y="263" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1579876794986">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="387" y="263" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1366.738@0.0.1366.738" timestamp="1579876794986" />
+    <state x="454" y="73" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1579877121751">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="454" y="73" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.738@0.0.1366.738" timestamp="1579877121751" />
+    <state x="65" y="0" key="new project wizard" timestamp="1579876916538">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="65" y="0" key="new project wizard/0.0.1366.738@0.0.1366.738" timestamp="1579876916538" />
   </component>
 </project>

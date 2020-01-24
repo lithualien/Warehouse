@@ -8,9 +8,8 @@ import java.util.Date;
  * @author Tomas Dominauskas
  */
 public class Product {
-    private String name, code;
+    private String name, code, expiration;
     private int quantity;
-    private Date expiration;
 
     /**
      * Class constructor.
@@ -24,7 +23,7 @@ public class Product {
      * @param quantity the quantity of the product in the warehouse.
      * @param expiration the expiration date of the product.
      */
-    public Product(String name, String code, int quantity, Date expiration) {
+    public Product(String name, String code, int quantity, String expiration) {
         this.name = name;
         this.code = code;
         this.quantity = quantity;
@@ -59,7 +58,7 @@ public class Product {
      * Sets the expiration date of the product.
      * @param expiration the expiration date of the product.
      */
-    public void setExpiration(Date expiration) {
+    public void setExpiration(String expiration) {
         this.expiration = expiration;
     }
 
@@ -83,7 +82,7 @@ public class Product {
      * Returns the expiration date of the product.
      * @return the expiration date of the product.
      */
-    public Date getExpiration() {
+    public String getExpiration() {
         return expiration;
     }
 
@@ -103,7 +102,7 @@ public class Product {
     public String toString() {
         return "name='" + name + '\'' +
                 ", code='" + code + '\'' +
-                ", quantity=" + quantity + '\'' +
-                ", expiration=" + expiration + '\n'; // will do something to be easily visible.
+                ", quantity='" + quantity + '\'' +
+                ", expiration='" + expiration + '\'' + "\n"; // will do something to be easily visible.
     }
 }
