@@ -1,25 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d005264-0465-49a0-a8be-3a7a2f8c6eb9" name="Default Changelist" comment="" />
+    <list default="true" id="2d005264-0465-49a0-a8be-3a7a2f8c6eb9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/github/lithualien/dao/Dao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/github/lithualien/dao/DaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/github/lithualien/product/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/lithualien/main/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1WqJ1RG04lRNZHn2KgaQqQ0wWK9" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.github.lithualien.Main" />
+      <option name="MAIN_CLASS_NAME" value="com.github.lithualien.main.Main" />
       <module name="Warehouse" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
@@ -28,6 +51,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -52,6 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1579870975928</updated>
       <workItem from="1579874671539" duration="85000" />
+      <workItem from="1579874981255" duration="457000" />
     </task>
     <servers />
   </component>
@@ -59,9 +88,9 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="378" y="48" key="com.intellij.ide.util.TipDialog" timestamp="1579874743705">
+    <state x="378" y="48" key="com.intellij.ide.util.TipDialog" timestamp="1579875043980">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="378" y="48" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1579874743705" />
+    <state x="378" y="48" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1579875043980" />
   </component>
 </project>

@@ -1,4 +1,4 @@
-package com.github.lithualien;
+package com.github.lithualien.main;
 
 public class Main {
 
