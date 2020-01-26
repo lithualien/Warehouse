@@ -1,6 +1,6 @@
 package com.github.lithualien.product;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 /**
  * Product class to store information about the product.
@@ -8,8 +8,9 @@ import java.util.Date;
  * @author Tomas Dominauskas
  */
 public class Product {
-    private String name, code, expiration;
+    private String name, code;
     private int quantity;
+    private LocalDate expiration;
 
     /**
      * Class constructor.
@@ -23,7 +24,7 @@ public class Product {
      * @param quantity the quantity of the product in the warehouse.
      * @param expiration the expiration date of the product.
      */
-    public Product(String name, String code, int quantity, String expiration) {
+    public Product(String name, String code, int quantity, LocalDate expiration) {
         this.name = name;
         this.code = code;
         this.quantity = quantity;
@@ -58,7 +59,7 @@ public class Product {
      * Sets the expiration date of the product.
      * @param expiration the expiration date of the product.
      */
-    public void setExpiration(String expiration) {
+    public void setExpiration(LocalDate expiration) {
         this.expiration = expiration;
     }
 
@@ -82,7 +83,7 @@ public class Product {
      * Returns the expiration date of the product.
      * @return the expiration date of the product.
      */
-    public String getExpiration() {
+    public LocalDate getExpiration() {
         return expiration;
     }
 
@@ -103,6 +104,6 @@ public class Product {
         return "name='" + name + '\'' +
                 ", code='" + code + '\'' +
                 ", quantity='" + quantity + '\'' +
-                ", expiration='" + expiration + '\'' + "\n"; // will do something to be easily visible.
+                ", expiration='" + expiration + '\'';
     }
 }

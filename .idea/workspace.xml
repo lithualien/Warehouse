@@ -2,15 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d005264-0465-49a0-a8be-3a7a2f8c6eb9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/com/github/lithualien/product/ProductTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/github/lithualien/dao/DaoImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/dao/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/lithualien/dao/Dao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/dao/DaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/lithualien/dao/DaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/lithualien/product/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/github/lithualien/product/ProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/github/lithualien/product/ProductTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="181" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -46,25 +51,54 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.github.lithualien.product" />
+      <recent name="com.github.lithualien.dao" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProductTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+  <component name="RunManager" selected="JUnit.All in Warehouse">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.github.lithualien.main.Main" />
       <module name="Warehouse" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.lithualien.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in Warehouse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Warehouse" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DaoImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Warehouse" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.lithualien.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.lithualien.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.github.lithualien.dao.DaoImplTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -84,7 +118,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductTest.getQuantity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Warehouse" />
       <extension name="coverage">
         <pattern>
@@ -94,7 +128,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.github.lithualien.product" />
       <option name="MAIN_CLASS_NAME" value="com.github.lithualien.product.ProductTest" />
-      <option name="METHOD_NAME" value="testToString" />
+      <option name="METHOD_NAME" value="getQuantity" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -102,9 +136,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ProductTest" />
-        <item itemvalue="JUnit.ProductTest.testToString" />
+        <item itemvalue="JUnit.All in Warehouse" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ProductTest" />
+        <item itemvalue="JUnit.ProductTest.getQuantity" />
+        <item itemvalue="JUnit.DaoImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -131,7 +167,10 @@
       <option name="presentableId" value="Default" />
       <updated>1579870975928</updated>
       <workItem from="1579874671539" duration="85000" />
-      <workItem from="1579874981255" duration="3783000" />
+      <workItem from="1579874981255" duration="10594000" />
+      <workItem from="1579951149083" duration="21061000" />
+      <workItem from="1579989332952" duration="3579000" />
+      <workItem from="1580027744639" duration="255000" />
     </task>
     <servers />
   </component>
@@ -143,14 +182,18 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="275" y="28" key="#Project_Structure/0.0.1366.738@0.0.1366.738" timestamp="1579877084316" />
-    <state x="92" y="92" width="1182" height="554" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1579878762336">
+    <state x="137" y="25" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579995423782">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="92" y="92" width="1182" height="554" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.738@0.0.1366.738" timestamp="1579878762336" />
-    <state x="452" y="71" key="#com.intellij.ide.util.MemberChooser" timestamp="1579876233068">
+    <state x="137" y="25" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1579995423782" />
+    <state x="71" y="33" width="1182" height="554" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1579973953208">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="452" y="71" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1579876233068" />
+    <state x="71" y="33" width="1182" height="554" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.738@0.0.1366.738" timestamp="1579973953208" />
+    <state x="452" y="71" key="#com.intellij.ide.util.MemberChooser" timestamp="1579964955654">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="452" y="71" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1579964955654" />
     <state x="413" y="130" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1579877111832">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -159,37 +202,68 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="313" y="59" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1366.738@0.0.1366.738" timestamp="1579877042204" />
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1579878793268">
+    <state x="463" y="111" key="FileChooserDialogImpl" timestamp="1579970291614">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1579878793268" />
-    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1579878793268">
+    <state x="463" y="111" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1579970291614" />
+    <state width="1323" height="184" key="GridCell.Tab.0.bottom" timestamp="1579997446754">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1579878793268" />
-    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1579878793268">
+    <state width="1323" height="184" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1579997446754" />
+    <state width="1323" height="184" key="GridCell.Tab.0.center" timestamp="1579997446754">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1579878793268" />
-    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1579878793268">
+    <state width="1323" height="184" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1579997446754" />
+    <state width="1323" height="184" key="GridCell.Tab.0.left" timestamp="1579997446754">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1579878793268" />
-    <state x="378" y="48" key="com.intellij.ide.util.TipDialog" timestamp="1579875043980">
+    <state width="1323" height="184" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1579997446754" />
+    <state width="1323" height="184" key="GridCell.Tab.0.right" timestamp="1579997446754">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="378" y="48" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1579875043980" />
+    <state width="1323" height="184" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1579997446754" />
+    <state width="1323" height="227" key="GridCell.Tab.1.bottom" timestamp="1579975340732">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="227" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1579975340732" />
+    <state width="1323" height="227" key="GridCell.Tab.1.center" timestamp="1579975340731">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="227" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1579975340731" />
+    <state width="1323" height="227" key="GridCell.Tab.1.left" timestamp="1579975340731">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="227" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1579975340731" />
+    <state width="1323" height="227" key="GridCell.Tab.1.right" timestamp="1579975340732">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="227" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1579975340732" />
+    <state width="1364" height="736" key="com.intellij.byteCodeViewer.ShowByteCodeAction" timestamp="1579972242093">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1364" height="736" key="com.intellij.byteCodeViewer.ShowByteCodeAction/0.0.1366.738@0.0.1366.738" timestamp="1579972242093" />
+    <state x="378" y="48" key="com.intellij.ide.util.TipDialog" timestamp="1579989332050">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="378" y="48" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1579989332050" />
     <state x="387" y="263" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1579876794986">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="387" y="263" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1366.738@0.0.1366.738" timestamp="1579876794986" />
-    <state x="454" y="73" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1579877121751">
+    <state x="454" y="73" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1579969150851">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="454" y="73" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.738@0.0.1366.738" timestamp="1579877121751" />
-    <state x="65" y="0" key="new project wizard" timestamp="1579876916538">
+    <state x="454" y="73" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.738@0.0.1366.738" timestamp="1579969150851" />
+    <state x="65" y="0" key="new project wizard" timestamp="1579989382093">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="65" y="0" key="new project wizard/0.0.1366.738@0.0.1366.738" timestamp="1579876916538" />
+    <state x="65" y="0" key="new project wizard/0.0.1366.738@0.0.1366.738" timestamp="1579989382093" />
+    <state x="106" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1579967853830">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="106" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1579967853830" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Warehouse$All_in_Warehouse.ic" NAME="All in Warehouse Coverage Results" MODIFIED="1579997362930" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
