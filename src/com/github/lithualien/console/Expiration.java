@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Class to find all expired food by given date.
+ * Class to find expired food by given date.
  *
  * @author Tomas Dominauskas
  */

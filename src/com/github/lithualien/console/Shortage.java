@@ -2,9 +2,15 @@ package com.github.lithualien.console;
 
 import com.github.lithualien.dao.Dao;
 import com.github.lithualien.product.Product;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Class to find lacking products.
+ *
+ * @author Tomas Dominauskas
+ */
 public class Shortage {
     /**
      * Class constructor to initialize methods.
@@ -25,10 +31,8 @@ public class Shortage {
                 printLackingProducts(dao.getLackingProducts(amount.nextInt()));
                 System.out.println("");
             }
-        } catch (NumberFormatException e) {
+        } catch (InputMismatchException e) {
             System.out.println("Only numbers are allowed.");
-        } catch (NullPointerException e) {
-            System.out.println("Nothing was found.");
         }
     }
 

@@ -1,10 +1,10 @@
 package com.github.lithualien.main;
 
 import com.github.lithualien.console.Expiration;
+import com.github.lithualien.console.FileSearcher;
 import com.github.lithualien.console.Shortage;
 import com.github.lithualien.dao.Dao;
 import com.github.lithualien.dao.DaoImpl;
-
 import java.util.Scanner;
 
 /**
@@ -13,25 +13,30 @@ import java.util.Scanner;
  * @author Tomas Dominauskas
  */
 public class Main {
+    private static Scanner input;
 
-    private static Dao dao;
     /**
      * The main method of the program.
      * @param args not used.
      */
     public static void main(String[] args) {
-        dao = new DaoImpl();
-        test();
+        enterFile();
     }
 
-    private static void test() {
+    /**
+     * Communication with user, allowing to communicate with console and get data.
+     * @param fileName the directory of the file.
+     */
+    private static void options(String fileName) {
         boolean loop = true;
-        dao.setProducts("csv//sample.csv");
+        Dao dao = new DaoImpl();
+        dao.setProducts(fileName);
         while(loop) {
-            Scanner input = new Scanner(System.in);
+            input = new Scanner(System.in);
             System.out.print(
                     "1. Find lacking products.\n" +
                     "2. Find expired products.\n" +
+                    "3. Choose new file.+\n" +
                     "0. Exit the program.\n"
             );
 
@@ -52,6 +57,18 @@ public class Main {
             } catch (NumberFormatException e) {
                 System.out.println("Only numbers are allowed.");
             }
+        }
+    }
+
+    /**
+     * Searches for a user inputted file name.
+     */
+    private static void enterFile() {
+        FileSearcher fileSearcher = new FileSearcher();
+        input = new Scanner(System.in);
+        String fileLocation = fileSearcher.inputFileName(input);
+        if(fileLocation!= null) {
+            options(fileLocation);
         }
     }
 }
