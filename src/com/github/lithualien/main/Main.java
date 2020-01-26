@@ -36,7 +36,6 @@ public class Main {
             System.out.print(
                     "1. Find lacking products.\n" +
                     "2. Find expired products.\n" +
-                    "3. Choose new file.+\n" +
                     "0. Exit the program.\n"
             );
 
