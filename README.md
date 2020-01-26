@@ -1,6 +1,6 @@
 # Warehouse
 
-* Naudojima Java versija: **1.8.0_191**
+* Naudojima Java versija: **11.0.6**
 * CSV failai talpinami projekto direktorijoje, csv kataloge.
 
 - [x] Peržiūrėti trūkstamų prekių kiekius.
