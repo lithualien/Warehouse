@@ -1,10 +1,12 @@
 package com.github.lithualien.main;
 
-import com.github.lithualien.console.Expiration;
-import com.github.lithualien.console.FileSearcher;
-import com.github.lithualien.console.Shortage;
-import com.github.lithualien.dao.Dao;
+import com.github.lithualien.console.ExpiredProductOutput;
+import com.github.lithualien.console.Output;
+import com.github.lithualien.console.ProductShortageOutput;
 import com.github.lithualien.dao.DaoImpl;
+import com.github.lithualien.services.ProductService;
+import com.github.lithualien.services.ProductServiceImpl;
+
 import java.util.Scanner;
 
 /**
@@ -20,35 +22,29 @@ public class Main {
      * @param args not used.
      */
     public static void main(String[] args) {
-        enterFile();
-    }
-
-    /**
-     * Communication with user, allowing to communicate with console and get data.
-     * @param fileName the directory of the file.
-     */
-    private static void options(String fileName) {
-        boolean loop = true;
-        Dao dao = new DaoImpl();
-        dao.setProducts(fileName);
-        while(loop) {
+        boolean loopStatement = true;
+        ProductService productService = new ProductServiceImpl(new DaoImpl());
+        Output output;
+        while(loopStatement) {
             input = new Scanner(System.in);
             System.out.print(
                     "1. Find lacking products.\n" +
-                    "2. Find expired products.\n" +
-                    "0. Exit the program.\n"
+                            "2. Find expired products.\n" +
+                            "0. Exit the program.\n"
             );
 
             try {
                 switch(Integer.parseInt(input.next())) {
                     case 1:
-                        new Shortage(input, dao);
+                        output = new ProductShortageOutput(productService, input);
+                        output.getOutput();
                         break;
                     case 2:
-                        new Expiration(input, dao);
+                        output = new ExpiredProductOutput(productService, input);
+                        output.getOutput();
                         break;
                     case 0:
-                        loop = false;
+                        loopStatement = false;
                         break;
                     default:
                         System.out.println("Please enter a valid option.");
@@ -56,18 +52,6 @@ public class Main {
             } catch (NumberFormatException e) {
                 System.out.println("Only numbers are allowed.");
             }
-        }
-    }
-
-    /**
-     * Searches for a user inputted file name.
-     */
-    private static void enterFile() {
-        FileSearcher fileSearcher = new FileSearcher();
-        input = new Scanner(System.in);
-        String fileLocation = fileSearcher.inputFileName(input);
-        if(fileLocation!= null) {
-            options(fileLocation);
         }
     }
 }

@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d005264-0465-49a0-a8be-3a7a2f8c6eb9" name="Default Changelist" comment="">
+    <list default="true" id="2d005264-0465-49a0-a8be-3a7a2f8c6eb9" name="Default Changelist" comment="changed a lot of code, added OOP, added service layer, dao isn't doing logic, everything is being handled by service layer, added equal method, to check if objects have the same value, added interface to console, for output.">
+      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/github/lithualien/console/Output.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/github/lithualien/services/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/github/lithualien/services/ProductServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/console/Expiration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/lithualien/console/ExpiredProductOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/console/FileSearcher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/console/Shortage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/lithualien/console/ProductShortageOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/dao/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/lithualien/dao/Dao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/dao/DaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/lithualien/dao/DaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/lithualien/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/lithualien/product/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/github/lithualien/dao/DaoImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/github/lithualien/product/ProductTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,10 +29,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JUnit4 Test Class" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -33,7 +45,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -41,6 +52,8 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -50,10 +63,17 @@
     <property name="create.test.in.the.same.root" value="true" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -62,6 +82,9 @@
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.github.lithualien.services" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -142,18 +165,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -170,110 +181,114 @@
       <workItem from="1579989332952" duration="3579000" />
       <workItem from="1580027744639" duration="10653000" />
       <workItem from="1580041420988" duration="601000" />
+      <workItem from="1590156295113" duration="8228000" />
+      <workItem from="1590262462076" duration="32000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="changed a lot of code, added OOP, added service layer, dao isn't doing logic, everything is being handled by service layer, added equal method, to check if objects have the same value, added interface to console, for output." />
+    <option name="LAST_COMMIT_MESSAGE" value="changed a lot of code, added OOP, added service layer, dao isn't doing logic, everything is being handled by service layer, added equal method, to check if objects have the same value, added interface to console, for output." />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="28" key="#Auto_Import" timestamp="1580033454923">
+    <state x="488" y="75" key="#com.intellij.ide.util.MemberChooser" timestamp="1590162445744">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="28" key="#Auto_Import/0.0.1366.738@0.0.1366.738" timestamp="1580033454923" />
-    <state x="275" y="28" key="#Project_Structure" timestamp="1579877084316">
+    <state x="488" y="75" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1590162445744" />
+    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590159760119">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="28" key="#Project_Structure/0.0.1366.738@0.0.1366.738" timestamp="1579877084316" />
-    <state x="137" y="25" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579995423782">
+    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1590159760119" />
+    <state x="294" y="0" key="CommitChangelistDialog2" timestamp="1590168949675">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="137" y="25" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1579995423782" />
-    <state x="71" y="33" width="1182" height="554" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1579973953208">
+    <state x="294" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1590168949675" />
+    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1590156337532">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="71" y="33" width="1182" height="554" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.738@0.0.1366.738" timestamp="1579973953208" />
-    <state x="452" y="71" key="#com.intellij.ide.util.MemberChooser" timestamp="1580032927949">
+    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1590156337532" />
+    <state width="1306" height="224" key="GridCell.Tab.0.bottom" timestamp="1590168950967">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="452" y="71" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1580032927949" />
-    <state x="413" y="130" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1579877111832">
+    <state width="1306" height="224" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1590168950967" />
+    <state width="1306" height="224" key="GridCell.Tab.0.center" timestamp="1590168950966">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="413" y="130" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1366.738@0.0.1366.738" timestamp="1579877111832" />
-    <state x="313" y="59" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1579877042204">
+    <state width="1306" height="224" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1590168950966" />
+    <state width="1306" height="224" key="GridCell.Tab.0.left" timestamp="1590168950966">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="313" y="59" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1366.738@0.0.1366.738" timestamp="1579877042204" />
-    <state x="381" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1580039025672">
+    <state width="1306" height="224" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1590168950966" />
+    <state width="1306" height="224" key="GridCell.Tab.0.right" timestamp="1590168950967">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="381" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738@0.0.1366.738" timestamp="1580039025672" />
-    <state x="463" y="111" key="FileChooserDialogImpl" timestamp="1580033598039">
+    <state width="1306" height="224" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1590168950967" />
+    <state width="1306" height="224" key="GridCell.Tab.1.bottom" timestamp="1590168950967">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="463" y="111" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1580033598039" />
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1580041457360">
+    <state width="1306" height="224" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1590168950967" />
+    <state width="1306" height="224" key="GridCell.Tab.1.center" timestamp="1590168950967">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580041457360" />
-    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1580041457360">
+    <state width="1306" height="224" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1590168950967" />
+    <state width="1306" height="224" key="GridCell.Tab.1.left" timestamp="1590168950967">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1580041457360" />
-    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1580041457360">
+    <state width="1306" height="224" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1590168950967" />
+    <state width="1306" height="224" key="GridCell.Tab.1.right" timestamp="1590168950967">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1580041457360" />
-    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1580041457360">
+    <state width="1306" height="224" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1590168950967" />
+    <state x="7" y="19" key="SettingsEditor" timestamp="1590262493355">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1580041457360" />
-    <state width="1323" height="227" key="GridCell.Tab.1.bottom" timestamp="1580040253941">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1323" height="227" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580040253941" />
-    <state width="1323" height="227" key="GridCell.Tab.1.center" timestamp="1580040253941">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1323" height="227" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1580040253941" />
-    <state width="1323" height="227" key="GridCell.Tab.1.left" timestamp="1580040253941">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1323" height="227" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1580040253941" />
-    <state width="1323" height="227" key="GridCell.Tab.1.right" timestamp="1580040253941">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1323" height="227" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1580040253941" />
-    <state width="1364" height="736" key="com.intellij.byteCodeViewer.ShowByteCodeAction" timestamp="1579972242093">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1364" height="736" key="com.intellij.byteCodeViewer.ShowByteCodeAction/0.0.1366.738@0.0.1366.738" timestamp="1579972242093" />
-    <state x="378" y="48" key="com.intellij.ide.util.TipDialog" timestamp="1579989332050">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="378" y="48" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1579989332050" />
-    <state x="387" y="263" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1579876794986">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="387" y="263" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1366.738@0.0.1366.738" timestamp="1579876794986" />
-    <state x="454" y="73" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1579969150851">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="454" y="73" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.738@0.0.1366.738" timestamp="1579969150851" />
-    <state x="65" y="0" key="new project wizard" timestamp="1579989382093">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="65" y="0" key="new project wizard/0.0.1366.738@0.0.1366.738" timestamp="1579989382093" />
-    <state x="106" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1579967853830">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="106" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1579967853830" />
+    <state x="7" y="19" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1590262493355" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/github/lithualien/product/Product.java</url>
+          <line>112</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/github/lithualien/product/Product.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/github/lithualien/product/Product.java</url>
+          <line>114</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/github/lithualien/product/Product.java</url>
+          <line>115</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/github/lithualien/product/Product.java</url>
+          <line>116</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/github/lithualien/product/Product.java</url>
+          <line>117</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Warehouse$All_in_Warehouse.ic" NAME="All in Warehouse Coverage Results" MODIFIED="1580039958466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Warehouse$Main.ic" NAME="Main Coverage Results" MODIFIED="1580037147735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.github.lithualien.main.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/Warehouse$All_in_Warehouse.ic" NAME="All in Warehouse Coverage Results" MODIFIED="1580039958466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

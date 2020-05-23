@@ -1,7 +1,8 @@
 package com.github.lithualien.console;
 
-import com.github.lithualien.dao.Dao;
 import com.github.lithualien.product.Product;
+import com.github.lithualien.services.ProductService;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
@@ -13,27 +14,24 @@ import java.util.Scanner;
  *
  * @author Tomas Dominauskas
  */
-public class Expiration {
+public class ExpiredProductOutput implements Output {
 
-    /**
-     * Class constructor to initialize methods.
-     * @param date Scanner used in Main class to take user input.
-     */
-    public Expiration(Scanner date, Dao dao) {
-        expiredProducts(date, dao);
+    private final ProductService productService;
+    private final Scanner scanner;
+
+    public ExpiredProductOutput(ProductService productService, Scanner scanner) {
+        this.productService = productService;
+        this.scanner = scanner;
     }
 
-    /**
-     * Receives expired food in the console.
-     * @param date Scanner used in Main class to take user input.
-     */
-    private void expiredProducts(Scanner date, Dao dao) {
+    @Override
+    public void getOutput() {
         System.out.println("Enter a date:");
         try {
-            if(date.hasNextLine()) {
+            if(scanner.hasNextLine()) {
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-                LocalDate inputDate = LocalDate.parse(date.next(), formatter);
-                printExpiredFood(dao.getExpiredProducts(inputDate));
+                LocalDate inputDate = LocalDate.parse(scanner.next(), formatter);
+                printExpiredFood(productService.getExpiredProducts(inputDate));
                 System.out.println("");
             }
         } catch (DateTimeParseException e) {

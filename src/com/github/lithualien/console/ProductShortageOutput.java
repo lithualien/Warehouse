@@ -1,7 +1,8 @@
 package com.github.lithualien.console;
 
-import com.github.lithualien.dao.Dao;
 import com.github.lithualien.product.Product;
+import com.github.lithualien.services.ProductService;
+
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
@@ -11,24 +12,21 @@ import java.util.Scanner;
  *
  * @author Tomas Dominauskas
  */
-public class Shortage {
-    /**
-     * Class constructor to initialize methods.
-     * @param amount Scanner used in Main method to take user input.
-     */
-    public Shortage(Scanner amount, Dao dao) {
-        lackingProducts(amount, dao);
+public class ProductShortageOutput implements Output {
+
+    private final ProductService productService;
+    private final Scanner scanner;
+
+    public ProductShortageOutput(ProductService productService, Scanner scanner) {
+        this.scanner = scanner;
+        this.productService = productService;
     }
 
-    /**
-     * Receives all lacking products in the warehouse.
-     * @param amount Scanner used in Main method to take user input.
-     */
-    private void lackingProducts(Scanner amount, Dao dao) {
-        System.out.println("Enter amount: ");
+    @Override
+    public void getOutput() {
         try {
-            if(amount.hasNextLine()) {
-                printLackingProducts(dao.getLackingProducts(amount.nextInt()));
+            if(scanner.hasNextLine()) {
+                printLackingProducts(productService.getLackingProducts(scanner.nextInt()));
                 System.out.println("");
             }
         } catch (InputMismatchException e) {
