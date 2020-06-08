@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d005264-0465-49a0-a8be-3a7a2f8c6eb9" name="Default Changelist" comment="changed a lot of code, added OOP, added service layer, dao isn't doing logic, everything is being handled by service layer, added equal method, to check if objects have the same value, added interface to console, for output.">
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/github/lithualien/console/Output.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/github/lithualien/services/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/github/lithualien/services/ProductServiceImpl.java" afterDir="false" />
+    <list default="true" id="2d005264-0465-49a0-a8be-3a7a2f8c6eb9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/github/lithualien/dao/FruitDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/github/lithualien/product/FruitProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/github/lithualien/services/Expirable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/github/lithualien/services/FruitService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/github/lithualien/services/Lackable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/console/Expiration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/lithualien/console/ExpiredProductOutput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/console/FileSearcher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/console/Shortage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/lithualien/console/ProductShortageOutput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/dao/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/lithualien/dao/Dao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/dao/DaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/lithualien/dao/DaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/console/ExpiredProductOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/lithualien/console/ExpiredProductOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/console/ProductShortageOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/lithualien/console/ProductShortageOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/dao/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/lithualien/dao/ProductDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/dao/DaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/lithualien/dao/FruitDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/lithualien/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/lithualien/product/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/github/lithualien/dao/DaoImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/github/lithualien/product/ProductTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/lithualien/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/github/lithualien/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/lithualien/services/FruitServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +30,8 @@
       <list>
         <option value="JUnit4 Test Class" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -182,8 +181,22 @@
       <workItem from="1580027744639" duration="10653000" />
       <workItem from="1580041420988" duration="601000" />
       <workItem from="1590156295113" duration="8228000" />
-      <workItem from="1590262462076" duration="32000" />
+      <workItem from="1590262462076" duration="352000" />
+      <workItem from="1590320170198" duration="4270000" />
+      <workItem from="1590324517453" duration="19000" />
+      <workItem from="1591284685924" duration="39000" />
+      <workItem from="1591357016234" duration="2637000" />
+      <workItem from="1591475964293" duration="130000" />
+      <workItem from="1591551092653" duration="37000" />
+      <workItem from="1591593918764" duration="3395000" />
     </task>
+    <task id="LOCAL−00001" summary="changed a lot of code, added OOP, added service layer, dao isn't doing logic, everything is being handled by service layer, added equal method, to check if objects have the same value, added interface to console, for output.">
+      <created>1590262552057</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1590262552059</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,38 +209,50 @@
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="75" key="#com.intellij.ide.util.MemberChooser" timestamp="1590162445744">
+    <state x="488" y="75" key="#com.intellij.ide.util.MemberChooser" timestamp="1591597195858">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="488" y="75" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1590162445744" />
-    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590159760119">
+    <state x="488" y="75" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1591597195858" />
+    <state x="344" y="293" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1591594616143">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1590159760119" />
-    <state x="294" y="0" key="CommitChangelistDialog2" timestamp="1590168949675">
+    <state x="344" y="293" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.738@0.0.1366.738" timestamp="1591594616143" />
+    <state x="466" y="238" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1591594518851">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="294" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1590168949675" />
+    <state x="466" y="238" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.738@0.0.1366.738" timestamp="1591594518851" />
+    <state x="252" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1591595646078">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="252" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738@0.0.1366.738" timestamp="1591595646078" />
+    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590323548483">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1590323548483" />
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1590262545149">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1590262545149" />
     <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1590156337532">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1590156337532" />
-    <state width="1306" height="224" key="GridCell.Tab.0.bottom" timestamp="1590168950967">
+    <state width="1323" height="184" key="GridCell.Tab.0.bottom" timestamp="1591596973207">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1306" height="224" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1590168950967" />
-    <state width="1306" height="224" key="GridCell.Tab.0.center" timestamp="1590168950966">
+    <state width="1323" height="184" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1591596973207" />
+    <state width="1323" height="184" key="GridCell.Tab.0.center" timestamp="1591596973206">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1306" height="224" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1590168950966" />
-    <state width="1306" height="224" key="GridCell.Tab.0.left" timestamp="1590168950966">
+    <state width="1323" height="184" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1591596973206" />
+    <state width="1323" height="184" key="GridCell.Tab.0.left" timestamp="1591596973206">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1306" height="224" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1590168950966" />
-    <state width="1306" height="224" key="GridCell.Tab.0.right" timestamp="1590168950967">
+    <state width="1323" height="184" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1591596973206" />
+    <state width="1323" height="184" key="GridCell.Tab.0.right" timestamp="1591596973206">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1306" height="224" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1590168950967" />
+    <state width="1323" height="184" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1591596973206" />
     <state width="1306" height="224" key="GridCell.Tab.1.bottom" timestamp="1590168950967">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -248,42 +273,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="7" y="19" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1590262493355" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/github/lithualien/product/Product.java</url>
-          <line>112</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/github/lithualien/product/Product.java</url>
-          <line>113</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/github/lithualien/product/Product.java</url>
-          <line>114</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/github/lithualien/product/Product.java</url>
-          <line>115</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/github/lithualien/product/Product.java</url>
-          <line>116</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/github/lithualien/product/Product.java</url>
-          <line>117</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="0" y="118" key="Vcs.Push.Dialog.v2" timestamp="1590262556568">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="0" y="118" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1590262556568" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Warehouse$Main.ic" NAME="Main Coverage Results" MODIFIED="1580037147735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

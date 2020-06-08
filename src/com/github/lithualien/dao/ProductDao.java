@@ -9,12 +9,6 @@ import java.util.List;
  *
  * @author Tomas Dominauskas
  */
-public interface Dao {
-
-    /**
-     * Reads the csv file, sorts the list and removes duplicates.
-     */
-    List<Product> all();
-
-
+public interface ProductDao<T extends Product> {
+    List<T> all();
 }

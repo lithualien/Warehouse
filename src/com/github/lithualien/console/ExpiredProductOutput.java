@@ -1,7 +1,7 @@
 package com.github.lithualien.console;
 
 import com.github.lithualien.product.Product;
-import com.github.lithualien.services.ProductService;
+import com.github.lithualien.services.Expirable;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -16,10 +16,10 @@ import java.util.Scanner;
  */
 public class ExpiredProductOutput implements Output {
 
-    private final ProductService productService;
+    private final Expirable productService;
     private final Scanner scanner;
 
-    public ExpiredProductOutput(ProductService productService, Scanner scanner) {
+    public ExpiredProductOutput(Expirable productService, Scanner scanner) {
         this.productService = productService;
         this.scanner = scanner;
     }

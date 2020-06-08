@@ -1,7 +1,7 @@
 package com.github.lithualien.console;
 
 import com.github.lithualien.product.Product;
-import com.github.lithualien.services.ProductService;
+import com.github.lithualien.services.Lackable;
 
 import java.util.InputMismatchException;
 import java.util.List;
@@ -14,19 +14,19 @@ import java.util.Scanner;
  */
 public class ProductShortageOutput implements Output {
 
-    private final ProductService productService;
+    private final Lackable lackable;
     private final Scanner scanner;
 
-    public ProductShortageOutput(ProductService productService, Scanner scanner) {
+    public ProductShortageOutput(Lackable lackable, Scanner scanner) {
         this.scanner = scanner;
-        this.productService = productService;
+        this.lackable = lackable;
     }
 
     @Override
     public void getOutput() {
         try {
             if(scanner.hasNextLine()) {
-                printLackingProducts(productService.getLackingProducts(scanner.nextInt()));
+                printLackingProducts(lackable.getLackingProducts(scanner.nextFloat()));
                 System.out.println("");
             }
         } catch (InputMismatchException e) {

@@ -3,9 +3,11 @@ package com.github.lithualien.main;
 import com.github.lithualien.console.ExpiredProductOutput;
 import com.github.lithualien.console.Output;
 import com.github.lithualien.console.ProductShortageOutput;
-import com.github.lithualien.dao.DaoImpl;
-import com.github.lithualien.services.ProductService;
-import com.github.lithualien.services.ProductServiceImpl;
+import com.github.lithualien.dao.FruitDaoImpl;
+import com.github.lithualien.product.FruitProduct;
+import com.github.lithualien.services.Expirable;
+import com.github.lithualien.services.FruitServiceImpl;
+import com.github.lithualien.services.Lackable;
 
 import java.util.Scanner;
 
@@ -23,7 +25,8 @@ public class Main {
      */
     public static void main(String[] args) {
         boolean loopStatement = true;
-        ProductService productService = new ProductServiceImpl(new DaoImpl());
+        Lackable<FruitProduct> lackable = new FruitServiceImpl(new FruitDaoImpl());
+        Expirable<FruitProduct> expirable = new FruitServiceImpl(new FruitDaoImpl());
         Output output;
         while(loopStatement) {
             input = new Scanner(System.in);
@@ -36,11 +39,11 @@ public class Main {
             try {
                 switch(Integer.parseInt(input.next())) {
                     case 1:
-                        output = new ProductShortageOutput(productService, input);
+                        output = new ProductShortageOutput(lackable, input);
                         output.getOutput();
                         break;
                     case 2:
-                        output = new ExpiredProductOutput(productService, input);
+                        output = new ExpiredProductOutput(expirable, input);
                         output.getOutput();
                         break;
                     case 0:
